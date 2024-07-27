@@ -4,18 +4,22 @@
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 
 ## Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Contributing](#contributing)
 
+- [Web Scraping Project](#web-scraping-project)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Features](#features)
+  - [Installation](#installation)
+    - [Prerequisites](#prerequisites)
+    - [Clone the Repository](#clone-the-repository)
+  - [Contributing](#contributing)
 
 ## Overview
+
 This project provides a robust web scraping tool designed to extract data from websites efficiently. The tool is built using Python and leverages popular libraries such as `requests`, `BeautifulSoup`, and `Scrapy`.
 
 ## Features
+
 - Efficient and fast data extraction
 - Support for multiple websites
 - Customizable scraping rules
@@ -23,11 +27,14 @@ This project provides a robust web scraping tool designed to extract data from w
 - Easy data export to CSV, JSON, and databases
 
 ## Installation
+
 ### Prerequisites
+
 - Python 3.7 or higher
 - pip (Python package installer)
 
 ### Clone the Repository
+
 ```sh
 git https://github.com/mohammedbehjoo/scraping.git
 
@@ -55,6 +62,5 @@ For any questions or feedback, please contact:
 
     Mohammed Behjoo
     Email: behjoo.mohammed@gmail.com
-    
 
 Thank you for using the Web Scraping Project!
