@@ -1,10 +1,12 @@
 import scrapy
-
+from scrapy.spiders import CrawlSpider,Rule
 
 class NewsSpiderSpider(scrapy.Spider):
     name = "news_spider"
     allowed_domains = ["zoomg.ir"]
-    start_urls = ["https://www.zoomg.ir/"]
+    start_urls = ["https://www.zoomg.ir/page/1/"]
+    
+    
 
     def parse(self, response):
         NEWS_SELECTOR = ".imgContainer"
@@ -26,3 +28,11 @@ class NewsSpiderSpider(scrapy.Spider):
                 "comments": news.css(COMMENTS_SELECTOR).extract_first(),
                 "summary": news.css(SUMMARY_SELECTOR).extract_first()
             }
+            
+        current_page = int(response.url.split('/')[-2])
+        next_page = current_page + 1
+
+        if next_page > 10:
+            return
+        else:
+            yield scrapy.Request(f'https://www.zoomg.ir/page/{next_page}/')

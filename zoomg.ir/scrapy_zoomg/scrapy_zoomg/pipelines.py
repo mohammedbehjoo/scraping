@@ -6,8 +6,14 @@
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
+from scrapy.exceptions import DropItem
 
 
 class ScrapyZoomgPipeline:
     def process_item(self, item, spider):
         return item
+
+
+class EmptyNewsZoomgPipeline:
+    def __init__(self):
+        self.title_seen = ()
