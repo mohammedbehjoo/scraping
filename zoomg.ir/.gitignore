@@ -1,0 +1,8 @@
+# ignore log files
+*.log
+# ignore csv files
+*.csv
+# ignore json files
+*.json
+# ignore config files of scrapy
+*.cfg
